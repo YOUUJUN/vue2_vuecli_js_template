@@ -9,6 +9,25 @@ Vue.use(VueRouter)
 //不变的路由配置，不参与菜单项构建
 export const constantRoutes = [
 	{
+		path: '/',
+		component: (resolve) => require(['@components/Layout/Layout.vue'], resolve),
+		redirect: '/index',
+		children: [
+			{
+				name: 'index',
+				path: '',
+				component: () => import('@/views/exception/Blank.vue'),
+				meta: {
+					icon: 'alert',
+					internalOrExternal: false,
+					keepAlive: false,
+					title: '首页',
+				},
+			},
+		],
+	},
+
+	{
 		path: '/user',
 		redirect: '/user/login',
 		component: BlankLayout,

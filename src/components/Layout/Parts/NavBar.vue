@@ -10,7 +10,7 @@
 			</div>
 
 			<div class="ctrl-wrap">
-				<span class="welcome">欢迎进入{{ platTitle }}</span>
+				<span class="welcome">欢迎进入</span>
 			</div>
 		</section>
 
@@ -50,17 +50,7 @@ export default {
 	},
 
 	computed: {
-		...mapGetters(['sidebar', 'userInfo']),
-
-		platTitle() {
-			const obj = {
-				1: '监管平台中心系统',
-				2: '运营平台中心系统',
-				3: '服务平台中心系统',
-			}
-
-			return obj[this.userInfo.platformType]
-		},
+		...mapGetters(['sidebar']),
 	},
 
 	methods: {

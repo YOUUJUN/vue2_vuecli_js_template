@@ -56,7 +56,13 @@ export default {
 		},
 
 		searchMenus(menus, list = []) {
+			if (menus.length === 0) {
+				return
+			}
 			for (let item of menus) {
+				if (typeof item.component !== 'string') {
+					return
+				}
 				if (!item.hidden && item.component.trim() !== 'Layout/BlankLayout') {
 					list.push(item)
 				}

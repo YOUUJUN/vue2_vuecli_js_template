@@ -2,7 +2,7 @@
 	<a-dropdown>
 		<div class="header-avatar" style="cursor: pointer">
 			<a-avatar class="avatar" size="large" shape="circle" :src="avatar" />
-			<span class="name">{{ userInfo.realName }}</span>
+			<span class="name">{{ $useChain(userInfo)['realName'] }}</span>
 			<a-icon type="caret-down" />
 		</div>
 		<a-menu :class="['avatar-menu']" slot="overlay">
