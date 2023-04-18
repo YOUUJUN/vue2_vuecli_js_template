@@ -3,7 +3,6 @@
  * @param {string} url
  * @returns {Boolean}
  */
-import Cookies from 'js-cookie'
 
 export function validURL(url) {
 	const reg =

@@ -5,13 +5,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Request from '@/utils/http.js'
-import '@/styles/less/table_form_common.less'
 //vue2.0 template 链运算符使用
 import { useChain } from '@/utils/index.js'
 
 import '@/icons' //导入所有svg
 
-import '@/permission' // permission control
+// import '@/permission' // permission control
 
 //导入全局组件
 import ComponentsRegister from '@/plugins/regist_global_components'
